@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monq Digital Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="js/jQueryFormStyler-master/dist/jquery.formstyler.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page jsPage">
+    <div class="container">
+        <div class="page-inner page-inner--wave page-inner--full-page">
+            <div class="frame">
+                <div class="headline headline--margin-bottom">
+                    <div class="title">Preferences</div>
+                    <div class="description headline__description">On this page you can configure the main system parameters available for customization</div>
+                </div>
+
+                <div class="form">
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">Company Title</div>
+                        <div class="input-container input-container--flex">
+                            <div class="input-frame">
+                                <input class="input input--text" type="text" placeholder="Default">
+                            </div>
+                            <div class="input-description input-description--transparent">empty</div>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">First Day</div>
+
+                        <div class="input-frame">
+                            <select class="select jsSelect">
+                                <option>Monday</option>
+                                <option>Sunday</option>
+                                <option>System</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">Container Width</div>
+
+                        <div class="input-frame">
+                            <select class="select jsSelect">
+                                <option>Fixed</option>
+                                <option>Flex</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">Home Page</div>
+
+                        <div class="input-frame">
+                            <select class="select jsSelect">
+                                <option>Starred Projects</option>
+                                <option>Setting</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">Indent Size</div>
+
+                        <div class="input-container input-container--flex">
+                            <div class="input-frame">
+                                <input class="input input--text" type="text" placeholder="Default">
+                            </div>
+                            <div class="input-description input-description--transparent">empty</div>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">Personal Code</div>
+                        <div class="input-container input-container--flex">
+                            <div class="input-frame input-frame--line">
+                                <input class="input input--text input--cut" type="text">
+                            </div>
+                            <div class="input-frame input-frame--line">
+                                <input class="input input--text input--cut" type="text">
+                            </div>
+                            <div class="input-frame">
+                                <input class="input input--text input--cut" type="text">
+                            </div>
+                            <div class="input-description">12 digits</div>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <div class="input-title input-title--cut input-title--middle">Theme</div>
+                        <div class="input-container input-container--top">
+                            <div class="input-frame input-frame--flex input-frame--list">
+                                <input class="radio jsButtonStatusTheme jsButtonStatusThemeLight jsRadioButton" type="radio" id="theme-light" name="theme" checked>
+                                <label class="radio-input jsButtonThemeLight" for="theme-light"></label>
+                                <div class="radio-label jsLabelForRadioButton">Light</div>
+                            </div>
+                            <div class="input-frame input-frame--flex input-frame--list">
+                                <input class="radio jsButtonStatusTheme jsButtonStatusThemeDark jsRadioButton" type="radio" id="theme-dark" name="theme">
+                                <label class="radio-input jsButtonThemeDark" for="theme-dark"></label>
+                                <div class="radio-label jsLabelForRadioButton">Dark</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-inner form__form-inner form-inner--flex">
+                        <button class="button button--full button--margin-right jsButtonSave">Apply and Save</button>
+                        <button class="button button--link">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footnote">
+                <p class="footnote__text">2020-2022
+                    <a class="link link--in-text" href="#">Terms of Service</a>
+                    and
+                    <a class="link link--in-text" href="#">Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/jQueryFormStyler-master/dist/jquery.formstyler.min.js"></script>
+<script src="js/script.js"></script>
+</html>
