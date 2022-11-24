@@ -1,16 +1,16 @@
 var gulp = require('gulp');
-var stylus = require('gulp-stylus');
+var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('styl', function () {
-    return gulp.src('stylus/*.styl')
+gulp.task('sass', function () {
+    return gulp.src('./sass/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(stylus())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css'))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('stylus/*.styl', gulp.series('styl'))
+    gulp.watch('./sass/**/*.scss', gulp.series('sass'))
 });
 

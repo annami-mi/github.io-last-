@@ -1,43 +1,48 @@
 $(document).ready(function() {
 
-    function checkChange(){
-        if ($('.jsButtonStatusThemeDark').prop('checked')){
-            $('.jsPage').addClass('page--theme--dark');
-        } else {
-            $('.jsPage').removeClass('page--theme--dark');
-        }
-    }
-
-    // клик по лейбл тоже активирует радио кнопку
     $('.jsLabelForRadioButton').on('click', function (){
         $(this).parent().find('.jsRadioButton').prop('checked', true);
-        checkChange()
     })
 
-    $(document).on('change', '.jsButtonStatusTheme', function (){
-        checkChange()
-    });
 
-    $('.jsButtonSave').on('click', function (){
-        if ($('.jsButtonStatusThemeDark').prop('checked')) {
-            localStorage.setItem("darkTheme", true);
-        }
-        else {
-            localStorage.setItem("darkTheme", false);
-        }
-    })
-
-    if (localStorage.getItem("darkTheme") === "true") {
-        $(".jsPage").addClass("page--theme--dark");
-        $('.jsButtonStatusThemeDark').prop('checked', true);
-        $('.jsButtonStatusThemeLight').prop('checked', false);
-    } else {
-        $(".jsPage").removeClass("page--theme--dark");
-        $('.jsButtonStatusThemeLight').prop('checked', true);
-    }
-
-    // кастомизирует селект
-    $('.jsSelect').styler();
 });
 
 
+/**
+ * Открывает модальное окно
+ */
+
+
+$(document).on('click', '.jsButtonModalOpen', function (e) {
+    var $this, id, showModal;
+
+    e.preventDefault();
+
+    $this = $(this);
+    id = $this.data('id');
+
+    showModal = function () {
+        $('#' + id).addClass('open');
+        $('body').addClass('hidden');
+    };
+
+    showModal();
+});
+
+
+/**
+ * Закрывает модальное окно
+ */
+$(document).on("click", ".jsButtonModalClose", function (e) {
+    $(".jsModal").removeClass("open");
+    $('body').removeClass('hidden');
+});
+
+
+$(document).mouseup(function (e) {
+    var popup = $('.jsDropdown');
+    if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+        popup.removeClass('open');
+        $('body').removeClass('hidden');
+    }
+});
