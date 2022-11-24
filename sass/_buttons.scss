@@ -1,0 +1,117 @@
+// button-icon - пользовательскте кнопки,
+// которые содержат в себе только графические иконки без текста
+// (гамбургер, крестик, флаги)
+
+// кнопкам, которые нужно показывать только в мобильной версии,
+// добавлять класс button-icon--mobile
+
+.button-icon{
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px;
+
+  width: 64px;
+  height: 64px;
+
+  transition: 200ms;
+  cursor: pointer;
+  // события
+  &:active,
+  &--active{
+    background-color: #F2F2F1;
+  }
+
+  // инфографика
+  &--logo{
+    background-image: url("../img/logo--mobile.svg");
+    background-size: 68px 40px;
+  }
+  &--cabinet{
+    background-image: url("../img/ic__user.svg");
+  }
+  &--navigation{
+    background-image: url("../img/ic__menu.svg");
+  }
+  &--close{
+    background-image: url("../img/ic__close.svg");
+    &:hover{
+      background-color: #F2F2F1;
+    }
+  }
+  &--plus{
+    background-image: url("../img/ic__plus-circle.svg");
+  }
+  &--dollar{
+    background-image: url("../img/ic__dollar-circle.svg");
+  }
+
+  // флаги
+  &--lang{
+    background-size: 24px 20px;
+    &:hover{
+      background-color: #F2F2F1;
+    }
+  }
+  &--ru{
+    background-image: url("../img/ic__flag--ru.svg");
+  }
+  &--eng{
+    background-image: url("../img/ic__flag--eng.svg");
+  }
+  &--es{
+    background-image: url("../img/ic__flag--es.svg");
+  }
+
+  // размер
+  &--small{
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+  }
+  &--medium{
+    width: 44px;
+    height: 40px;
+  }
+
+  // позиционирование
+  &--margin{
+    margin-right: 9px;
+  }
+}
+
+@media screen and (min-width: 1170px){
+  .button-icon--mobile{
+    display: none;
+  }
+}
+// end
+
+// кнопки, которые содержат в себе текст
+.button-text{
+  padding: 4px 9px 2px 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  &--border {
+    border: 1px solid #F36769;
+    border-radius: 5px;
+  }
+  &--margin-right{
+    margin-right: 8px;
+  }
+}
+
+// стрелка для дропдауна
+.arrow-drop{
+  width: 16px;
+  height: 16px;
+  background: no-repeat center / 16px;
+  &--down{
+    background-image: url("../img/ic__arrow-down.svg");
+  }
+}

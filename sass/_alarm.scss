@@ -1,0 +1,45 @@
+.alarm-dot{
+  position: absolute;
+  top: -9px;
+  right: -15px;
+
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--border{
+    background: #FFFFFF;
+    border: 1px solid #F5CB44;
+  }
+  &--yellow{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 100%), #F5CB44;
+  }
+  &--blur{
+    text-shadow: 0 1px 1px #FFFFFF;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), inset 0 2px 4px #FFFFFF;
+  }
+  &--coral{
+    background: #F18B71;
+  }
+
+  &--large{
+    width: 32px;
+    height: 32px;
+    padding-top: 3px;
+  }
+  &--medium{
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+  }
+  &--small{
+    width: 12px;
+    height: 12px;
+  }
+}
